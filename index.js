@@ -31,7 +31,7 @@ async function getItemUrl(url) {
         let title_concept = item["title"];
         for (let material of item["materials"]) {
             let url = `${material.link}`;
-            let name = `${cont++} ${title_concept} - ${material.name}`;
+            let name = `${cont++} ${title_concept} - ${material.name}_${material.id}`;
             getDataVideo(url, name, title_material)
         }
     }
@@ -40,7 +40,9 @@ async function getItemUrl(url) {
 async function getDataVideo(url, title, title_material) {
     let body = await request(url);
     const url_video = body.match(/https:\/\/platzivod\.streaming\.mediaservices\.windows\.net\/[0-9a-z-\/\.]+\(format=mpd-time-csf\)/gm);
+    const url_video2 = body.match(/https:\/\/mdstrm\.com\/video\/[0-9a-z]+(\.m3u8)/gm);
+    fs.appendFile(`list/${title_material}`, `${url_video2}**${title}\n`);
     fs.appendFile(`list/${title_material}`, `${url_video}**${title}\n`);
 }
-
-getSource();
+//getSource();
+getItemUrl('/clases/pro-arquitectura/');
