@@ -14,6 +14,9 @@ download()
     done <<< "`cat $1`"
 }
 
+find . -name '*.part' -delete
+find . -name '*.ytdl' -delete
+
 for file in list/*; do
   video=$(echo $file | sed 's/list/video/g');
   mkdir -p "$video"
