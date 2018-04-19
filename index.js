@@ -50,29 +50,33 @@ async function getDataVideo(url, title, title_material) {
 
 
 let pages=[
-    'pro-arquitectura',
-    'nodejs',
-    'javascript-pro-2016',
-    'python',
-    'ia',
-    'scikit', //Machine Learning Aplicado con Python
-    'redes-neuronales',
-    'webpack',
-    'devops',
-    'amazon-web-services',
-    'azure', //Azure IaaS
-    'azure-paas',
-    'digital-ocean',
-    'arquitectura-docker',
-    'data', //Big Data y Ciencia de Datos
-    'datascience', //Data Science
-    'seguridad', //Análisis de Vulnerabilidades Web con OWASP
-    'postgresql',
-    'ingenieria', //Ingeniería de Software
-    'terminal', //terminal y línea de comandos
-    'arquitectura-software',
-    'pro-arquitectura',
+    // 'pro-arquitectura',
+    // 'nodejs',
+    // 'javascript-pro-2016',
+    // 'python',
+    // 'ia',
+    // 'scikit', //Machine Learning Aplicado con Python
+    // 'redes-neuronales',
+    // 'webpack',
+    // 'devops',
+    // 'amazon-web-services',
+    // 'azure', //Azure IaaS
+    // 'azure-paas',
+    // 'digital-ocean',
+    // 'arquitectura-docker',
+    // 'data', //Big Data y Ciencia de Datos
+    // 'datascience', //Data Science
+    // 'seguridad', //Análisis de Vulnerabilidades Web con OWASP
+    // 'postgresql',
+    // 'ingenieria', //Ingeniería de Software
+    // 'terminal', //terminal y línea de comandos
+    // 'arquitectura-software',
+    // 'pro-arquitectura',
     //'git-github',
+    //'graphql',
+    //'go-basico',
+    //'go-avanzado',
+    'node-2016',
 ];
 
 async function downlaodList(pages) {
